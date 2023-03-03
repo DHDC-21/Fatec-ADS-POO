@@ -40,20 +40,20 @@ public class Produto {
 
     // Metodos
     public void imprimir(){
-        System.out.println("Codigo: " + codigo);
-        System.out.println("Descricao: " + descricao);
-        System.out.println("Valor: " + valor);
-        System.out.println("Quantidade: " + quantidadeEstoque);
+        System.out.println("Codigo: " + this.codigo);
+        System.out.println("Descricao: " + this.descricao);
+        System.out.println("Valor: " + this.valor);
+        System.out.println("Quantidade: " + this.quantidadeEstoque);
     }
 
     public void darEntrada(int qtd){
-        qtd += quantidadeEstoque;
+        qtd += this.quantidadeEstoque;
     }
     public void darSaida(int qtd){
-        if(qtd<quantidadeEstoque){
+        if(qtd<this.quantidadeEstoque){
             System.out.println("Voce esta sem estoque para dar saida");
             return;
         }
-        qtd -=quantidadeEstoque;
+        qtd -=this.quantidadeEstoque;
     }
 }
